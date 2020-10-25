@@ -2,8 +2,14 @@
 
 public class PlayerController : MonoBehaviour
 {
+    #region Private Variables
+
     private MovementBase movementBehaviour;
     private ShootingBase shootingBehaviour;
+
+    #endregion
+
+    #region Unity Methods
 
     private void Awake()
     {
@@ -16,6 +22,10 @@ public class PlayerController : MonoBehaviour
         HandleMovement();
         HandleShooting();
     }
+
+    #endregion
+
+    #region My Methods
 
     private void HandleMovement()
     {
@@ -35,4 +45,6 @@ public class PlayerController : MonoBehaviour
             shootingBehaviour.Shoot();
         }
     }
+
+    #endregion
 }

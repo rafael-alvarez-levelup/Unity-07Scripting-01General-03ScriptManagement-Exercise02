@@ -3,6 +3,8 @@
 [CreateAssetMenu(fileName = "ProjectileData", menuName = "Data/Projectile")]
 public class ProjectileData : ScriptableObject
 {
+    #region Properties
+
     public Rigidbody Projectile
     {
         get
@@ -26,6 +28,12 @@ public class ProjectileData : ScriptableObject
         }
     }
 
+    #endregion
+
+    #region Private Variables
+
     [SerializeField] private Rigidbody projectile;
     [SerializeField] private float projectileForce;
+
+    #endregion
 }

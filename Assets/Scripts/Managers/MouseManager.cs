@@ -2,6 +2,8 @@
 
 public class MouseManager : MonoBehaviour
 {
+    #region Properties
+
     public static MouseManager Instance
     {
         get
@@ -14,8 +16,16 @@ public class MouseManager : MonoBehaviour
         }
     }
 
+    #endregion
+
+    #region Private Variables
+
     private static MouseManager instance;
     private Camera mainCamera;
+
+    #endregion
+
+    #region Unity Methods
 
     private void Awake()
     {
@@ -23,6 +33,10 @@ public class MouseManager : MonoBehaviour
 
         mainCamera = Camera.main;
     }
+
+    #endregion
+
+    #region My Methods
 
     public Vector3 GetMouseWorldPosition()
     {
@@ -33,4 +47,6 @@ public class MouseManager : MonoBehaviour
         mouseWorldPosition.z = 0;
         return mouseWorldPosition;
     }
+
+    #endregion
 }
