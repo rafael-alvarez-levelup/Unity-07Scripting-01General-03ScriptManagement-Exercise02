@@ -4,11 +4,10 @@ public class ShootingProjectileBehaviour : ShootingBase
 {
     [SerializeField] private ProjectileData projectileData;
 
-    public override void Shoot()
+    public override void Shoot(Vector3 direction)
     {
         Rigidbody projectile = Instantiate(projectileData.Projectile, transform.position, Quaternion.identity);
 
-        Vector3 projectileDelta = MouseManager.Instance.GetMouseWorldPosition() - transform.position;
-        projectile.AddForce(projectileDelta.normalized * projectileData.ProjectileForce);
+        projectile.AddForce(direction * projectileData.ProjectileForce);
     }
 }

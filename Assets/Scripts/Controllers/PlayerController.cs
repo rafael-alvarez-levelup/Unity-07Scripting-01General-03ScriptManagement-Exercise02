@@ -42,7 +42,8 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            shootingBehaviour.Shoot();
+            Vector3 shootDirection = MouseUtilities.GetMouseWorldPosition() - transform.position;
+            shootingBehaviour.Shoot(shootDirection);
         }
     }
 
