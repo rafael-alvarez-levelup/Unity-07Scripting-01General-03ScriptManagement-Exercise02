@@ -11,20 +11,12 @@ public class ProjectileData : ScriptableObject
         {
             return projectile;
         }
-        private set
-        {
-            projectile = value;
-        }
     }
     public float ProjectileForce
     {
         get
         {
             return projectileForce;
-        }
-        private set
-        {
-            projectileForce = value;
         }
     }
 

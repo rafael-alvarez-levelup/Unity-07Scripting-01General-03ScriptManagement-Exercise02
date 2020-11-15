@@ -9,10 +9,6 @@ public class SpeedData : ScriptableObject
         {
             return speed;
         }
-        private set
-        {
-            speed = value;
-        }
     }
 
     [SerializeField] private float speed;
